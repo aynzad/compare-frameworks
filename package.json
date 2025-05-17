@@ -2,9 +2,10 @@
   "name": "compare-frameworks",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "dev:all": "turbo dev --parallel",
+    "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
@@ -16,5 +17,10 @@
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.76.1",
+    "@tanstack/react-router": "^1.120.5",
+    "tailwindcss": "3"
   }
 }
