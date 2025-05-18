@@ -3,8 +3,7 @@ import sharedConfig from "@repo/tailwind-config";
 
 const config: Config = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,jsx,ts,tsx}",
     "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [sharedConfig],
