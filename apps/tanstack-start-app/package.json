@@ -12,6 +12,7 @@
   "dependencies": {
     "@repo/tailwind-config": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@repo/api": "workspace:*",
     "@tanstack/react-query": "^5.76.1",
     "@tanstack/react-router": "^1.120.5",
     "@tanstack/router-vite-plugin": "^1.120.5",

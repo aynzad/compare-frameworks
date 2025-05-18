@@ -1,4 +1,4 @@
-import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
 import { PageLayout } from "@repo/ui";
 import { Home, BarChart2 } from "lucide-react";
 import type { QueryClient } from "@tanstack/react-query";
@@ -16,22 +16,24 @@ const sidebarItems = [
   },
 ];
 
-export const Route = createRootRoute({
-  component: () => (
-    <PageLayout
-      sidebar={{ items: sidebarItems }}
-      header={<h1 className="text-xl font-semibold">TanStack Start App</h1>}
-    >
-      <Outlet />
-    </PageLayout>
-  ),
-});
+type RouterContext = {
+  queryClient: QueryClient;
+};
 
-// This is needed for the router to work with React Query
-declare module "@tanstack/react-router" {
-  interface Register {
-    context: {
-      queryClient: QueryClient;
-    };
-  }
-}
+export const Route = createRootRouteWithContext<RouterContext>()({
+  component: () => {
+    const items = sidebarItems.map((item) => ({
+      ...item,
+      isActive: window.location.pathname === item.href,
+    }));
+
+    return (
+      <PageLayout
+        sidebar={{ items }}
+        header={<h1 className="text-xl font-semibold">TanStack Start App</h1>}
+      >
+        <Outlet />
+      </PageLayout>
+    );
+  },
+});

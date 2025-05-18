@@ -15,6 +15,7 @@
     "@remix-run/react": "^2.16.6",
     "@remix-run/serve": "^2.16.6",
     "@repo/ui": "workspace:*",
+    "@repo/api": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "isbot": "^4.1.0",
     "react": "^19.1.0",

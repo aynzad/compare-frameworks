@@ -12,6 +12,7 @@
   "dependencies": {
     "@repo/tailwind-config": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@repo/api": "workspace:*",
     "@tanstack/react-query": "^5.28.4",
     "@tanstack/react-router": "^1.16.0",
     "lucide-react": "^0.511.0",
