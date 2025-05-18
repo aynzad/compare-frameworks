@@ -1,0 +1,109 @@
+{
+  "projectRules": {
+    "framework": {
+      "name": "React",
+      "version": "19.x",
+      "typescript": true,
+      "strictMode": true
+    },
+    "codeStyle": {
+      "componentNaming": {
+        "pattern": "PascalCase",
+        "examples": ["UserProfile", "NavigationBar", "ButtonGroup"]
+      },
+      "fileNaming": {
+        "components": "PascalCase.tsx",
+        "hooks": "use*.ts",
+        "utils": "camelCase.ts",
+        "types": "*.types.ts",
+        "constants": "*.constants.ts"
+      },
+      "importOrder": [
+        "react",
+        "external-libraries",
+        "components",
+        "hooks",
+        "utils",
+        "types",
+        "styles"
+      ]
+    },
+    "componentStructure": {
+      "required": [
+        "imports",
+        "types/interfaces",
+        "component definition",
+        "exports"
+      ],
+      "optional": ["constants", "helper functions", "styles"]
+    },
+    "bestPractices": {
+      "components": [
+        "Use functional components with TypeScript",
+        "Implement proper prop typing",
+        "Use React.memo for performance optimization when needed",
+        "Keep components focused and single-responsibility",
+        "Use proper error boundaries"
+      ],
+      "stateManagement": [
+        "Use React hooks for local state",
+        "Consider context for global state",
+        "Use proper state management patterns"
+      ],
+      "performance": [
+        "Implement proper memoization",
+        "Use proper dependency arrays in hooks",
+        "Avoid unnecessary re-renders"
+      ]
+    },
+    "testing": {
+      "framework": "Jest + React Testing Library",
+      "naming": "*.test.tsx or *.spec.tsx",
+      "coverage": {
+        "minimum": 80,
+        "criticalPaths": 90
+      }
+    },
+    "documentation": {
+      "required": [
+        "Component purpose and usage",
+        "Props interface documentation",
+        "Complex logic explanation"
+      ],
+      "format": "JSDoc"
+    },
+    "dependencies": {
+      "core": ["react", "react-dom", "typescript"],
+      "recommended": ["@types/react", "@types/react-dom", "eslint", "prettier"]
+    },
+    "folderStructure": {
+      "src": {
+        "components": "Reusable UI components",
+        "hooks": "Custom React hooks",
+        "utils": "Utility functions",
+        "types": "TypeScript type definitions",
+        "constants": "Application constants",
+        "styles": "Global styles and themes",
+        "pages": "Page components",
+        "services": "API and external service integrations",
+        "context": "React context providers",
+        "assets": "Static assets"
+      }
+    },
+    "errorHandling": {
+      "required": [
+        "Proper error boundaries",
+        "Type-safe error handling",
+        "User-friendly error messages"
+      ]
+    },
+    "accessibility": {
+      "required": [
+        "Semantic HTML",
+        "ARIA attributes where needed",
+        "Keyboard navigation support",
+        "Color contrast compliance"
+      ]
+    }
+  }
+}
